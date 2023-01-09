@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "IranSans";
+  src: url(../fonts/IRANSansWeb.ttf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img {
+    @apply w-full object-cover block;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply w-[90vw] mx-auto max-w-7xl;
+  }
+  .cell-header {
+    @apply whitespace-nowrap text-right py-3 cursor-default;
+  }
+  .cell {
+    @apply whitespace-nowrap py-2 px-3;
+  }
+}

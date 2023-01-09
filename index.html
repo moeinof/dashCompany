@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- owl carousal -->
+    <link
+      rel="stylesheet"
+      href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+    <!-- alpine js -->
+    <script defer src="./node_modules/alpinejs/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="font-IranSans">
+    <!-- header -->
+    <header>
+      <!-- top header -->
+      <nav class="bg-slate-800 text-slate-300">
+        <div class="wrapper py-2 flex items-center justify-between flex-wrap">
+          <div class="md:flex gap-8">
+            <div>
+              <span class="text-amber-500 font-bold">آدرس ایمیل:</span>
+              <span>Example@gmail.com</span>
+            </div>
+
+            <div>
+              <span class="text-amber-500 font-bold">شماره تماس:</span>
+              <span>۰۲۱-۲۲۲-۳۲۵۳</span>
+            </div>
+          </div>
+
+          <!-- socials -->
+          <div class="flex gap-1">
+            <a
+              href="#"
+              class="w-8 h-8 grid place-content-center bg-slate-700 rounded"
+              ><i class="bx bxl-facebook-square text-2xl"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 grid place-content-center bg-slate-700 rounded"
+              ><i class="bx bxl-instagram-alt text-2xl"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 grid place-content-center bg-slate-700 rounded"
+              ><i class="bx bxl-twitter text-2xl"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+      <!-- main header -->
+      <nav class="bg-slate-700 text-slate-300" x-data="{nav:false}">
+        <div class="wrapper py-2 flex justify-between items-center">
+          <!-- logo -->
+          <h4 class="cursor-default text-amber-500">نام کمپانی</h4>
+
+          <!-- hamburger btn -->
+          <i
+            class="bx bx-menu cursor-pointer text-4xl md:hidden"
+            @click="nav=true"
+          ></i>
+
+          <!-- mobile nav -->
+          <div
+            class="fixed top-0 left-0 w-full h-screen bg-black/50 md:hidden"
+            x-show="nav"
+          >
+            <div
+              x-show="nav"
+              @click.away="nav=false"
+              x-transition
+              class="bg-white p-5 w-[95vw] max-w-sm mx-auto rounded-md mt-32 relative text-slate-700"
+            >
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 px-4 rounded duration-200 active:bg-slate-300 text-xl"
+                    >خانه</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 px-4 rounded duration-200 active:bg-slate-300 text-xl"
+                    >درباره ما</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 px-4 rounded duration-200 active:bg-slate-300 text-xl"
+                    >خدمات</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 px-4 rounded duration-200 active:bg-slate-300 text-xl"
+                    >پروژه ها</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 px-4 rounded duration-200 active:bg-slate-300 text-xl"
+                    >بلاگ</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    class="block py-4 px-4 rounded duration-200 active:bg-slate-300 text-xl"
+                    >تماس با ما</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- desktop nav -->
+          <div class="hidden md:flex">
+            <a
+              href="#"
+              class="px-4 block text-lg hover:text-amber-500 duration-200"
+              >خانه</a
+            >
+            <a
+              href="#"
+              class="px-4 block text-lg hover:text-amber-500 duration-200"
+              >درباره ما</a
+            >
+            <a
+              href="#"
+              class="px-4 block text-lg hover:text-amber-500 duration-200"
+              >خدمات</a
+            >
+            <a
+              href="#"
+              class="px-4 block text-lg hover:text-amber-500 duration-200"
+              >پروژه ها</a
+            >
+            <a
+              href="#"
+              class="px-4 block text-lg hover:text-amber-500 duration-200"
+              >بلاگ</a
+            >
+            <a
+              href="#"
+              class="px-4 block text-lg hover:text-amber-500 duration-200"
+              >تماس با ما</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section
+      class="h-screen bg-fixed grid place-content-center text-slate-300"
+      style="
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(./assets/images/hero.png);
+      "
+    >
+      <div class="flex flex-col gap-5 wrapper items-center">
+        <div class="flex items-center gap-5">
+          <span class="bg-slate-300 w-12 h-1"></span>
+          <h2 class="">از ۱۳۲۰</h2>
+          <span class="bg-slate-300 w-12 h-1"></span>
+        </div>
+
+        <h1 class="max-w-4xl text-center text-5xl">
+          ما خوشحال خواهیم شد که از کار شما مراقبت کنیم و بهترین کیفیت را ارائه
+          دهیم.
+        </h1>
+
+        <div class="grid grid-cols-2 gap-2 w-[400px] mt-6">
+          <a
+            href="#"
+            class="bg-slate-700 rounded py-2 text-xl text-slate-300 text-center"
+            >تماس با ما</a
+          >
+          <a
+            href="#"
+            class="bg-amber-500 rounded py-2 text-xl text-slate-800 text-center"
+            >سوالات متداول</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="my-16 wrapper">
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <!-- about content -->
+        <div>
+          <h4>خوش آمدید به نام کمپانی</h4>
+          <h2>ساخت و ساز با کیفیت و مقرون به صرفه</h2>
+          <p class="text-slate-500">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی
+            در شصت و سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را
+            می طلبد
+          </p>
+
+          <h3>چجوری میتونیم کمکتون کنیم</h3>
+          <div class="grid md:grid-cols-2 mt-6 text-slate-500 gap-4">
+            <!-- single service -->
+            <div
+              class="flex gap-3 items-center hover:text-slate-900 duration-300"
+            >
+              <img
+                src="./assets/images/about/building.png"
+                alt=""
+                class="w-12 h-12"
+              />
+              <div>
+                <h4 class="font-bold">لورم ایپسوم</h4>
+                <p class="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                </p>
+              </div>
+            </div>
+
+            <!-- single service -->
+            <div
+              class="flex gap-3 items-center hover:text-slate-900 duration-300"
+            >
+              <img
+                src="./assets/images/about/consult.png"
+                alt=""
+                class="w-12 h-12"
+              />
+              <div>
+                <h4 class="font-bold">لورم ایپسوم</h4>
+                <p class="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                </p>
+              </div>
+            </div>
+
+            <!-- single service -->
+            <div
+              class="flex gap-3 items-center hover:text-slate-900 duration-300"
+            >
+              <img
+                src="./assets/images/about/engineer.png"
+                alt=""
+                class="w-12 h-12"
+              />
+              <div>
+                <h4 class="font-bold">لورم ایپسوم</h4>
+                <p class="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                </p>
+              </div>
+            </div>
+
+            <!-- single service -->
+            <div
+              class="flex gap-3 items-center hover:text-slate-900 duration-300"
+            >
+              <img
+                src="./assets/images/about/floor-plan.png"
+                alt=""
+                class="w-12 h-12"
+              />
+              <div>
+                <h4 class="font-bold">لورم ایپسوم</h4>
+                <p class="text-sm">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- about image -->
+        <figure class="relative h-full">
+          <div
+            class="bg-slate-700 text-slate-300 flex gap-4 items-center p-4 absolute bottom-16 -right-20 -rotate-90"
+          >
+            <img
+              src="./assets/images/about/reverse-engineering.png"
+              alt=""
+              class="w-12 h-12"
+            />
+            <div class="font-bold">
+              <h3 class="text-amber-500">۳۰</h3>
+              <h4>سال تجربه کاری</h4>
+            </div>
+          </div>
+          <img src="./assets/images/about.png" alt="" class="h-full" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- intro -->
+    <section class="py-20 bg-amber-500">
+      <div
+        class="wrapper flex flex-col md:flex-row items-center justify-around"
+      >
+        <div>
+          <h4>شما می توانید برای کارهای ساختمانی و نوسازی با ما تماس بگیرید</h4>
+          <h1 class="text-white">شما می توانید برای کارهای ساختمانی</h1>
+        </div>
+
+        <a
+          href="#"
+          class="rounded bg-slate-700 text-white w-[250px] text-center py-4 mt-8 md:mt-0"
+          >قرار گذاشتن</a
+        >
+      </div>
+    </section>
+
+    <!-- services -->
+    <section class="my-16 wrapper">
+      <!-- title -->
+      <div class="text-center mb-8">
+        <h4 class="font-bold text-amber-500 mb-5">ما چکار میکنیم</h4>
+        <h2 class="font-bold">خدمات ما</h2>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2 items-center">
+        <div class="flex flex-col gap-4">
+          <!-- single service -->
+          <article
+            class="bg-slate-700 text-slate-200 p-4 flex gap-6 items-center"
+          >
+            <img
+              src="./assets/images/service/engineer.png"
+              alt=""
+              class="w-16 h-16"
+            />
+            <div class="flex flex-col gap-3">
+              <h4>ساخت و ساز</h4>
+              <p class="text-sm">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </p>
+              <a
+                href="#"
+                class="bg-white text-amber-500 rounded px-4 py-1 text-xl self-end"
+                >بیشتر بخوانید</a
+              >
+            </div>
+          </article>
+
+          <!-- single service -->
+          <article
+            class="bg-slate-700 text-slate-200 p-4 flex gap-6 items-center"
+          >
+            <img
+              src="./assets/images/service/modern-house (1).png"
+              alt=""
+              class="w-16 h-16"
+            />
+            <div class="flex flex-col gap-3">
+              <h4>ساخت و ساز</h4>
+              <p class="text-sm">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </p>
+              <a
+                href="#"
+                class="bg-white text-amber-500 rounded px-4 py-1 text-xl self-end"
+                >بیشتر بخوانید</a
+              >
+            </div>
+          </article>
+
+          <!-- single service -->
+          <article
+            class="bg-slate-700 text-slate-200 p-4 flex gap-6 items-center"
+          >
+            <img
+              src="./assets/images/service/reverse-engineering.png"
+              alt=""
+              class="w-16 h-16"
+            />
+            <div class="flex flex-col gap-3">
+              <h4>ساخت و ساز</h4>
+              <p class="text-sm">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است
+              </p>
+              <a
+                href="#"
+                class="bg-white text-amber-500 rounded px-4 py-1 text-xl self-end"
+                >بیشتر بخوانید</a
+              >
+            </div>
+          </article>
+        </div>
+
+        <img src="./assets/images/service.webp" alt="" />
+      </div>
+    </section>
+
+    <!-- counter -->
+    <section
+      class="py-28"
+      style="
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(./assets/images/counter.png);
+      "
+    >
+      <div class="wrapper grid gap-y-12 gap-x-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- single counter -->
+        <div class="flex gap-4 items-center">
+          <img src="./assets/images/engineer.png" alt="" class="w-16 h-16" />
+          <div>
+            <h2 class="text-amber-500 font-bold">۳۰۰۰</h2>
+            <p class="text-white">پروژه های تکمیل شده</p>
+          </div>
+        </div>
+
+        <!-- single counter -->
+        <div class="flex gap-4 items-center">
+          <img src="./assets/images/engineer.png" alt="" class="w-16 h-16" />
+          <div>
+            <h2 class="text-amber-500 font-bold">۲۰۰۰</h2>
+            <p class="text-white">مشتریان خوشحال</p>
+          </div>
+        </div>
+
+        <!-- single counter -->
+        <div class="flex gap-4 items-center">
+          <img src="./assets/images/engineer.png" alt="" class="w-16 h-16" />
+          <div>
+            <h2 class="text-amber-500 font-bold">۲۰۰۰</h2>
+            <p class="text-white">مشتریان خوشحال</p>
+          </div>
+        </div>
+
+        <!-- single counter -->
+        <div class="flex gap-4 items-center">
+          <img src="./assets/images/engineer.png" alt="" class="w-16 h-16" />
+          <div>
+            <h2 class="text-amber-500 font-bold">۲۰۰۰</h2>
+            <p class="text-white">مشتریان خوشحال</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- team -->
+    <section class="my-16 wrapper">
+      <!-- title -->
+      <div class="text-center mb-8">
+        <h4 class="font-bold text-amber-500 mb-5">تیم و کارکنان</h4>
+        <h2 class="font-bold">مهندسین و کارکنان ما</h2>
+      </div>
+
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center gap-3"
+      >
+        <!-- single team -->
+        <article
+          class="overflow-hidden rounded-md shadow-md max-w-sm group relative"
+        >
+          <img src="./assets/images/staff/2.webp" alt="" />
+
+          <div
+            class="absolute left-0 top-0 flex duration-300 opacity-0 group-hover:opacity-100 gap-2 flex-col"
+          >
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-instagram text-3xl text-white"></i
+            ></a>
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-twitter text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-facebook text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-linkedin text-3xl text-white"></i
+            ></a>
+          </div>
+
+          <div
+            class="bg-white text-center py-4 group-hover:bg-amber-500 duration-200"
+          >
+            <h4>نام نام خوانوادگی</h4>
+            <p class="text-slate-500">مهندس ارشد</p>
+          </div>
+        </article>
+
+        <!-- single team -->
+        <article
+          class="overflow-hidden rounded-md shadow-md max-w-sm group relative"
+        >
+          <img src="./assets/images/staff/1.webp" alt="" />
+
+          <div
+            class="absolute left-0 top-0 flex duration-300 opacity-0 group-hover:opacity-100 gap-2 flex-col"
+          >
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-instagram text-3xl text-white"></i
+            ></a>
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-twitter text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-facebook text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-linkedin text-3xl text-white"></i
+            ></a>
+          </div>
+
+          <div
+            class="bg-white text-center py-4 group-hover:bg-amber-500 duration-200"
+          >
+            <h4>نام نام خوانوادگی</h4>
+            <p class="text-slate-500">مهندس ارشد</p>
+          </div>
+        </article>
+
+        <!-- single team -->
+        <article
+          class="overflow-hidden rounded-md shadow-md max-w-sm group relative"
+        >
+          <img src="./assets/images/staff/3.webp" alt="" />
+
+          <div
+            class="absolute left-0 top-0 flex duration-300 opacity-0 group-hover:opacity-100 gap-2 flex-col"
+          >
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-instagram text-3xl text-white"></i
+            ></a>
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-twitter text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-facebook text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-linkedin text-3xl text-white"></i
+            ></a>
+          </div>
+
+          <div
+            class="bg-white text-center py-4 group-hover:bg-amber-500 duration-200"
+          >
+            <h4>نام نام خوانوادگی</h4>
+            <p class="text-slate-500">مهندس ارشد</p>
+          </div>
+        </article>
+
+        <!-- single team -->
+        <article
+          class="overflow-hidden rounded-md shadow-md max-w-sm group relative"
+        >
+          <img src="./assets/images/staff/4.webp" alt="" />
+
+          <div
+            class="absolute left-0 top-0 flex duration-300 opacity-0 group-hover:opacity-100 gap-2 flex-col"
+          >
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-instagram text-3xl text-white"></i
+            ></a>
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-twitter text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-facebook text-3xl text-white"></i
+            ></a>
+
+            <a
+              href="#"
+              class="bg-slate-700 rounded-full w-10 h-10 grid place-content-center"
+              ><i class="bx bxl-linkedin text-3xl text-white"></i
+            ></a>
+          </div>
+
+          <div
+            class="bg-white text-center py-4 group-hover:bg-amber-500 duration-200"
+          >
+            <h4>نام نام خوانوادگی</h4>
+            <p class="text-slate-500">مهندس ارشد</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section class="my-16">
+      <!-- title -->
+      <div class="text-center mb-8">
+        <h4 class="font-bold text-amber-500 mb-5">نمونه کارها</h4>
+        <h2 class="font-bold">پروژه ها</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3">
+        <!-- single project -->
+        <article
+          class="h-[300px] lg:h-[400px] relative group"
+          style="
+            background-image: url(./assets/images/project/project1.png);
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute w-full h-full top-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-200 grid place-content-center"
+          >
+            <a href="#" class="text-center">
+              <h4 class="text-amber-500">عنوان پروژه</h4>
+              <p class="text-white">توضیح مختصر پروژه</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- single project -->
+        <article
+          class="h-[300px] lg:h-[400px] relative group"
+          style="
+            background-image: url(./assets/images/project/project2.png);
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute w-full h-full top-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-200 grid place-content-center"
+          >
+            <a href="#" class="text-center">
+              <h4 class="text-amber-500">عنوان پروژه</h4>
+              <p class="text-white">توضیح مختصر پروژه</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- single project -->
+        <article
+          class="h-[300px] lg:h-[400px] relative group"
+          style="
+            background-image: url(./assets/images/project/project3.png);
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute w-full h-full top-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-200 grid place-content-center"
+          >
+            <a href="#" class="text-center">
+              <h4 class="text-amber-500">عنوان پروژه</h4>
+              <p class="text-white">توضیح مختصر پروژه</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- single project -->
+        <article
+          class="h-[300px] lg:h-[400px] relative group"
+          style="
+            background-image: url(./assets/images/project/project5.png);
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute w-full h-full top-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-200 grid place-content-center"
+          >
+            <a href="#" class="text-center">
+              <h4 class="text-amber-500">عنوان پروژه</h4>
+              <p class="text-white">توضیح مختصر پروژه</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- single project -->
+        <article
+          class="h-[300px] lg:h-[400px] relative group"
+          style="
+            background-image: url(./assets/images/project/project6.png);
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute w-full h-full top-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-200 grid place-content-center"
+          >
+            <a href="#" class="text-center">
+              <h4 class="text-amber-500">عنوان پروژه</h4>
+              <p class="text-white">توضیح مختصر پروژه</p>
+            </a>
+          </div>
+        </article>
+
+        <!-- single project -->
+        <article
+          class="h-[300px] lg:h-[400px] relative group"
+          style="
+            background-image: url(./assets/images/project/project4.png);
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute w-full h-full top-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 duration-200 grid place-content-center"
+          >
+            <a href="#" class="text-center">
+              <h4 class="text-amber-500">عنوان پروژه</h4>
+              <p class="text-white">توضیح مختصر پروژه</p>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- testimonial -->
+    <section class="my-16 wrapper">
+      <!-- title -->
+      <div class="text-center mb-8">
+        <h4 class="font-bold text-amber-500 mb-5">نظرات مشتریان</h4>
+        <h2 class="font-bold">مشتریان خوشحال</h2>
+      </div>
+
+      <!-- slider -->
+      <div class="owl-carousel owl-theme max-w-2xl mx-auto">
+        <!-- single slider -->
+        <div>
+          <div class="flex gap-3 items-center">
+            <figure class="h-16 w-16 rounded-full overflow-hidden">
+              <img src="./assets/images/testimonial/1.webp" alt="" />
+            </figure>
+            <div>
+              <h4>نام نقد کننده</h4>
+              <p class="text-amber-500">مدیر عامل شرکت گوگل پردازان</p>
+            </div>
+          </div>
+          <p class="text-slate-500 text-sm my-4">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید سادگی
+            نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+          </p>
+        </div>
+
+        <!-- single slider -->
+        <div>
+          <div class="flex gap-3 items-center">
+            <figure class="h-16 w-16 rounded-full overflow-hidden">
+              <img src="./assets/images/testimonial/2.webp" alt="" />
+            </figure>
+            <div>
+              <h4>نام نقد کننده</h4>
+              <p class="text-amber-500">مدیر عامل شرکت گوگل پردازان</p>
+            </div>
+          </div>
+          <p class="text-slate-500 text-sm my-4">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید سادگی
+            نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+          </p>
+        </div>
+
+        <!-- single slider -->
+        <div>
+          <div class="flex gap-3 items-center">
+            <figure class="h-16 w-16 rounded-full overflow-hidden">
+              <img src="./assets/images/testimonial/1.webp" alt="" />
+            </figure>
+            <div>
+              <h4>نام نقد کننده</h4>
+              <p class="text-amber-500">مدیر عامل شرکت گوگل پردازان</p>
+            </div>
+          </div>
+          <p class="text-slate-500 text-sm my-4">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید سادگی
+            نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- blogs -->
+    <section class="my-16 wrapper">
+      <!-- title -->
+      <div class="text-center mb-8">
+        <h4 class="font-bold text-amber-500 mb-5">وبلاگ ها</h4>
+        <h2 class="font-bold">بلاگ های اخیر</h2>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-16">
+        <!-- single blog -->
+        <article class="shadow-lg bg-slate-100">
+          <a href="#">
+            <img src="./assets/images/blog/1.webp" alt="" />
+          </a>
+
+          <div class="flex justify-between items-center gap-2 p-5">
+            <p class="text-slate-500">۱۰ شهریور</p>
+            <div class="flex items-center gap-3">
+              <div class="flex gap-1 items-center">
+                <i class="bx bxs-user"></i>
+                <span class="text-slate-500">ادمین</span>
+              </div>
+
+              <div class="flex gap-1 items-center text-amber-500">
+                <i class="bx bxs-comment"></i>
+                <span>نظرات</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <a href="#">
+              <h3 class="mb-4">لورم ایپسوم متن ساختگی با تولید سادگی</h3>
+            </a>
+
+            <p class="text-slate-500">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید
+            </p>
+          </div>
+        </article>
+
+        <!-- single blog -->
+        <article class="shadow-lg bg-slate-100">
+          <a href="#">
+            <img src="./assets/images/blog/2.webp" alt="" />
+          </a>
+
+          <div class="flex justify-between items-center gap-2 p-5">
+            <p class="text-slate-500">۱۰ شهریور</p>
+            <div class="flex items-center gap-3">
+              <div class="flex gap-1 items-center">
+                <i class="bx bxs-user"></i>
+                <span class="text-slate-500">ادمین</span>
+              </div>
+
+              <div class="flex gap-1 items-center text-amber-500">
+                <i class="bx bxs-comment"></i>
+                <span>نظرات</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <a href="#">
+              <h3 class="mb-4">لورم ایپسوم متن ساختگی با تولید سادگی</h3>
+            </a>
+
+            <p class="text-slate-500">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید
+            </p>
+          </div>
+        </article>
+
+        <!-- single blog -->
+        <article class="shadow-lg bg-slate-100">
+          <a href="#">
+            <img src="./assets/images/blog/3.webp" alt="" />
+          </a>
+
+          <div class="flex justify-between items-center gap-2 p-5">
+            <p class="text-slate-500">۱۰ شهریور</p>
+            <div class="flex items-center gap-3">
+              <div class="flex gap-1 items-center">
+                <i class="bx bxs-user"></i>
+                <span class="text-slate-500">ادمین</span>
+              </div>
+
+              <div class="flex gap-1 items-center text-amber-500">
+                <i class="bx bxs-comment"></i>
+                <span>نظرات</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <a href="#">
+              <h3 class="mb-4">لورم ایپسوم متن ساختگی با تولید سادگی</h3>
+            </a>
+
+            <p class="text-slate-500">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center">
+        <a href="#" class="py-1 px-6 text-xl bg-amber-500 rounded inline-block"
+          >مشاهده همه بلاگ ها</a
+        >
+      </div>
+    </section>
+
+    <!-- contact / Q&A -->
+    <section
+      class="py-14"
+      style="
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.9)
+          ),
+          url(./assets/images/contact.png);
+      "
+    >
+      <div class="wrapper grid lg:grid-cols-2 gap-4">
+        <article>
+          <p class="text-amber-500">یک پیام ارسال کنید</p>
+          <h3 class="">ارسال پیام به ما</h3>
+
+          <form class="my-8">
+            <input
+              type="text"
+              class="mb-3 w-full rounded-md border py-2 px-5 max-w-xl"
+              placeholder="نام و نام خوانوادگی"
+            />
+
+            <input
+              type="email"
+              class="mb-3 w-full rounded-md border py-2 px-5 max-w-xl"
+              placeholder="ایمیل شما"
+            />
+
+            <input
+              type="text"
+              class="mb-3 w-full rounded-md border py-2 px-5 max-w-xl"
+              placeholder="موضوع"
+            />
+
+            <textarea
+              class="mb-3 w-full rounded-md border py-2 px-5 max-w-xl resize-none h-40"
+              placeholder="متن پیغام شما"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="bg-amber-500 px-16 py-1 text-lg block rounded"
+            >
+              ارسال
+            </button>
+          </form>
+        </article>
+
+        <!-- Q & A -->
+        <article>
+          <p class="text-amber-500">سوالات متداول</p>
+          <h3 class="">می خواهید چیزی از ما بپرسید ؟</h3>
+          <p class="text-slate-500 my-6">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولیدلورم
+            ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+            طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید
+          </p>
+
+          <!-- accordion -->
+          <div class="max-w-xl bg-white">
+            <!-- q 1 -->
+            <div
+              class="border mb-2 rounded p-3"
+              x-data="{open:false}"
+              @click.outside="open=false"
+            >
+              <div
+                @click="open=!open"
+                class="flex items-center justify-between cursor-pointer"
+              >
+                <h4>سوال متداول شماره اول</h4>
+                <i
+                  class="bx bxs-chevron-down text-3xl duration-300"
+                  :class="open ? 'rotate-180' : ''"
+                ></i>
+              </div>
+
+              <p class="text-slate-500 p-2" x-show="open" x-transition>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد
+              </p>
+            </div>
+
+            <!-- q 2 -->
+            <div
+              class="border mb-2 rounded p-3"
+              x-data="{open:false}"
+              @click.outside="open=false"
+            >
+              <div
+                @click="open=!open"
+                class="flex items-center justify-between cursor-pointer"
+              >
+                <h4>سوال متداول شماره دوم</h4>
+                <i
+                  class="bx bxs-chevron-down text-3xl duration-300"
+                  :class="open ? 'rotate-180' : ''"
+                ></i>
+              </div>
+
+              <p class="text-slate-500 p-2" x-show="open" x-transition>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد
+              </p>
+            </div>
+
+            <!-- q 3 -->
+            <div
+              class="border mb-2 rounded p-3"
+              x-data="{open:false}"
+              @click.outside="open=false"
+            >
+              <div
+                @click="open=!open"
+                class="flex items-center justify-between cursor-pointer"
+              >
+                <h4>سوال متداول شماره سوم</h4>
+                <i
+                  class="bx bxs-chevron-down text-3xl duration-300"
+                  :class="open ? 'rotate-180' : ''"
+                ></i>
+              </div>
+
+              <p class="text-slate-500 p-2" x-show="open" x-transition>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+                زبان فارسی ایجاد کرد
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="bg-slate-700 py-16">
+        <div
+          class="wrapper text-slate-300 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        >
+          <!-- footer info/socials -->
+          <div class="flex flex-col gap-3">
+            <h4 class="font-bold">شرکت ساختمانی تاپ لرن</h4>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید
+            </p>
+
+            <!-- socials -->
+            <div class="flex gap-1">
+              <a
+                href="#"
+                class="w-8 h-8 grid place-content-center bg-slate-800 rounded"
+                ><i class="bx bxl-facebook-square text-2xl"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 grid place-content-center bg-slate-800 rounded"
+                ><i class="bx bxl-instagram-alt text-2xl"></i
+              ></a>
+              <a
+                href="#"
+                class="w-8 h-8 grid place-content-center bg-slate-800 rounded"
+                ><i class="bx bxl-twitter text-2xl"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- footer services -->
+          <div>
+            <h4 class="mb-5">خدمات</h4>
+
+            <div class="flex gap-6 items-center mb-4">
+              <img
+                src="./assets/images/service/service-item/1.webp"
+                alt=""
+                class="w-16 h-16"
+              />
+              <div>
+                <a href="#">این خیلی فوق العاده است و زیباست</a>
+                <div>
+                  <div class="flex gap-6 items-center">
+                    <div class="flex gap-1 items-center text-amber-500">
+                      <i class="bx bxs-user text-xl"></i>
+                      <span>ادمین</span>
+                    </div>
+
+                    <div class="flex gap-1 items-center text-amber-500">
+                      <i class="bx bxs-comment text-xl"></i>
+                      <span>۵ نظر</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-6 items-center mb-4">
+              <img
+                src="./assets/images/service/service-item/2.webp"
+                alt=""
+                class="w-16 h-16"
+              />
+              <div>
+                <a href="#">این خیلی فوق العاده است و زیباست</a>
+                <div>
+                  <div class="flex gap-6 items-center">
+                    <div class="flex gap-1 items-center text-amber-500">
+                      <i class="bx bxs-user text-xl"></i>
+                      <span>ادمین</span>
+                    </div>
+
+                    <div class="flex gap-1 items-center text-amber-500">
+                      <i class="bx bxs-comment text-xl"></i>
+                      <span>۵ نظر</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-6 items-center mb-4">
+              <img
+                src="./assets/images/service/service-item/3.webp"
+                alt=""
+                class="w-16 h-16"
+              />
+              <div>
+                <a href="#">این خیلی فوق العاده است و زیباست</a>
+                <div>
+                  <div class="flex gap-6 items-center">
+                    <div class="flex gap-1 items-center text-amber-500">
+                      <i class="bx bxs-user text-xl"></i>
+                      <span>ادمین</span>
+                    </div>
+
+                    <div class="flex gap-1 items-center text-amber-500">
+                      <i class="bx bxs-comment text-xl"></i>
+                      <span>۵ نظر</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- footer nav -->
+          <div>
+            <h4 class="mb-5">دسترسی سریع</h4>
+
+            <nav class="">
+              <a
+                href="#"
+                class="hover:text-amber-500 duration-200 flex items-center gap-1 py-2"
+              >
+                <i class="bx bx-chevron-left text-xl"></i>
+                <span>خانه</span>
+              </a>
+
+              <a
+                href="#"
+                class="hover:text-amber-500 duration-200 flex items-center gap-1 py-2"
+              >
+                <i class="bx bx-chevron-left text-xl"></i>
+                <span>درباره ما</span>
+              </a>
+
+              <a
+                href="#"
+                class="hover:text-amber-500 duration-200 flex items-center gap-1 py-2"
+              >
+                <i class="bx bx-chevron-left text-xl"></i>
+                <span>خدمات</span>
+              </a>
+
+              <a
+                href="#"
+                class="hover:text-amber-500 duration-200 flex items-center gap-1 py-2"
+              >
+                <i class="bx bx-chevron-left text-xl"></i>
+                <span>پروژه ها</span>
+              </a>
+
+              <a
+                href="#"
+                class="hover:text-amber-500 duration-200 flex items-center gap-1 py-2"
+              >
+                <i class="bx bx-chevron-left text-xl"></i>
+                <span>بلاگ</span>
+              </a>
+
+              <a
+                href="#"
+                class="hover:text-amber-500 duration-200 flex items-center gap-1 py-2"
+              >
+                <i class="bx bx-chevron-left text-xl"></i>
+                <span>تماس با ما</span>
+              </a>
+            </nav>
+          </div>
+
+          <!-- footer contact -->
+          <div>
+            <h4 class="mb-5">سوالی دارید؟</h4>
+
+            <div class="flex gap-2 items-center mb-3">
+              <i class="bx bx-map-alt text-2xl text-amber-500"></i>
+              <span>واشنگتن سمت راست طبقه چهارم</span>
+            </div>
+
+            <div class="flex gap-2 items-center mb-3">
+              <i class="bx bxs-phone text-2xl text-amber-500"></i>
+              <span>12323123123</span>
+            </div>
+
+            <div class="flex gap-2 items-center mb-3">
+              <i class="bx bxs-envelope text-2xl text-amber-500"></i>
+              <span>Example@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-800 py-4">
+        <p class="text-slate-400 text-center">
+          <span>&copy;</span>
+          <span>
+            تمامی حقوق مادی و معنوی این وب سایت متعلق به تیم تاپ لرن میباشد.
+          </span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./assets/js/jquery-3.6.2.min.js"></script>
+    <script src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          rtl: true,
+          items: 1,
+          autoplay: true,
+          autoplayTimeout: 2500,
+        });
+      });
+    </script>
+  </body>
+</html>

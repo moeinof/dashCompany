@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- alpine js -->
+    <script defer src="./node_modules/alpinejs/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="font-IranSans" x-data="{sidebar:false}">
+    <!-- navbar -->
+    <header class="bg-gray-700 text-gray-300 shadow-md fixed w-full z-30">
+      <div
+        class="flex items-center justify-between w-[90vw] xl:w-[95vw] mx-auto py-2"
+      >
+        <!-- sidebar btn -->
+        <i
+          class="bx bx-menu text-4xl cursor-pointer duration-200 hover:text-blue-300"
+          @click="sidebar=true"
+        ></i>
+
+        <!-- logo -->
+        <div class="cursor-default">
+          <h5 class="font-bold text-blue-300">سلام معین دریابیگی خوش آمدید</h5>
+          <small class="text-sm">شما مدیر هستید</small>
+        </div>
+      </div>
+    </header>
+
+    <aside
+      class="bg-black/50 fixed w-full h-screen top-0 left-0 z-40"
+      x-show="sidebar"
+    >
+      <section
+        class="max-w-md w-80 bg-gray-800 h-screen text-gray-300 relative"
+        @click.away="sidebar=false"
+        x-show="sidebar"
+        x-transition
+      >
+        <h3 class="text-blue-300 cursor-default py-6 text-center">
+          پنل داشبورد
+        </h3>
+
+        <i
+          class="bx bx-x cursor-pointer text-red-600 hover:scale-110 absolute top-3 left-2 text-5xl duration-200"
+          @click="sidebar=false"
+        ></i>
+
+        <ul class="my-8">
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bxl-php text-3xl text-blue-300"></i>
+                <span>نمایش وبسایت</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bxs-home text-3xl text-blue-300"></i>
+                <span>داشبورد</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i
+                  class="bx bx-dots-horizontal-rounded text-3xl text-blue-300"
+                ></i>
+                <span>منوی بالایی</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bxs-id-card text-3xl text-blue-300"></i>
+                <span>درباره ما</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bxs-book-reader text-3xl text-blue-300"></i>
+                <span>مقدمه</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bxs-cog text-3xl text-blue-300"></i>
+                <span>خدمات</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bxs-user-account text-3xl text-blue-300"></i>
+                <span>تیم</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bxs-photo-album text-3xl text-blue-300"></i>
+                <span>نمونه کارها</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-expand-horizontal text-3xl text-blue-300"></i>
+                <span>نظرات مشتریات</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-expand-horizontal text-3xl text-blue-300"></i>
+                <span>سوالات متداول</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-expand-horizontal text-3xl text-blue-300"></i>
+                <span>فوتر</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-expand-horizontal text-3xl text-blue-300"></i>
+                <span>کاربران</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-expand-horizontal text-3xl text-blue-300"></i>
+                <span>نظرات</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-expand-horizontal text-3xl text-blue-300"></i>
+                <span>پیام کاربران</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-700 duration-200 px-4 py-2">
+            <a href="#" class="block">
+              <div class="flex items-center gap-2">
+                <i class="bx bx-expand-horizontal text-3xl text-blue-300"></i>
+                <span>بلاگ</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="bg-gray-900 min-h-screen pt-20">
+      <div class="wrapper max-w-7xl">
+        <!-- statics -->
+        <section
+          class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-8 py-16"
+        >
+          <div
+            class="bg-white flex items-center justify-between cursor-default hover:scale-105 duration-300 text-gray-500 p-5"
+          >
+            <i class="bx bxs-book-content text-5xl"></i>
+
+            <div class="text-center">
+              <h2 class="text-blue-600 font-bold">۳۰</h2>
+              <p>پست ها</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white flex items-center justify-between cursor-default hover:scale-105 duration-300 text-gray-500 p-5"
+          >
+            <i class="bx bxs-book-content text-5xl"></i>
+
+            <div class="text-center">
+              <h2 class="text-blue-600 font-bold">۴۲</h2>
+              <p>پروژه ها</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white flex items-center justify-between cursor-default hover:scale-105 duration-300 text-gray-500 p-5"
+          >
+            <i class="bx bxs-book-content text-5xl"></i>
+
+            <div class="text-center">
+              <h2 class="text-blue-600 font-bold">۶۳۰</h2>
+              <p>کامنت</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white flex items-center justify-between cursor-default hover:scale-105 duration-300 text-gray-500 p-5"
+          >
+            <i class="bx bxs-book-content text-5xl"></i>
+
+            <div class="text-center">
+              <h2 class="text-blue-600 font-bold">۲۵۰</h2>
+              <p>کاربران</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- table -->
+        <section class="overflow-x-auto bg-slate-100 p-6">
+          <table class="w-full table-auto">
+            <thead class="border-b-4 border-slate-500">
+              <tr>
+                <th class="cell-header">کارفرما</th>
+                <th class="cell-header">نوع پروژه</th>
+                <th class="cell-header">کشور</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="odd:bg-blue-100 hover:bg-blue-200 duration-200">
+                <td class="cell">شرکت جهان گستر</td>
+                <td class="cell">شرکتی</td>
+                <td class="cell">ایران</td>
+              </tr>
+
+              <tr class="odd:bg-blue-100 hover:bg-blue-200 duration-200">
+                <td class="cell">پناه جویان</td>
+                <td class="whitespace-nowrap py-2 px-3">شرکتی</td>
+                <td class="whitespace-nowrap py-2 px-3">ماداگاسکار</td>
+              </tr>
+
+              <tr class="odd:bg-blue-100 hover:bg-blue-200 duration-200">
+                <td class="cell">طلافروشی</td>
+                <td class="cell">فروشگاهی</td>
+                <td class="cell">ایران</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <!-- scripts -->
+  </body>
+</html>
